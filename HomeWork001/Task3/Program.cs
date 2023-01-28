@@ -23,4 +23,4 @@ else
 }
 Console.WriteLine("***");
 
-Console.WriteLine("Программа, выполнена.");
+Console.WriteLine("Программа, выполнена");
