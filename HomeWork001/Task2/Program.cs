@@ -55,5 +55,8 @@ else
 }
 
 
-Console.WriteLine("***");
+Console.WriteLine("---");
 Console.WriteLine("Наибольшее число: " + max);
+Console.WriteLine("***");
+
+Console.WriteLine("Программа, выполнена.");

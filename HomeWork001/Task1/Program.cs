@@ -31,4 +31,4 @@ else
     Console.WriteLine("Наибольшее число: " + num2);
     Console.WriteLine("***");
 }
-Console.WriteLine("Программа выполнена.");
+Console.WriteLine("Программа, выполнена.");
