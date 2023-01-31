@@ -32,6 +32,9 @@ Console.WriteLine("---");
 if (num < 1)
 {
     Console.WriteLine("Такого дня недели нет!");
+    Console.ForegroundColor = ConsoleColor.DarkYellow;
+    Console.WriteLine("Подсчет недель невозможен");
+    Console.ForegroundColor = ConsoleColor.White;
 }
 else
 {
@@ -85,11 +88,11 @@ else
         //     Console.WriteLine("В неделе всего 7 дней! Вы ввели неверное число.");  //Данное условие, для вывода данных ограничивающих ввод всего одной недели!!!
         // }
     }
+    Console.WriteLine();
+    Console.ForegroundColor = ConsoleColor.DarkYellow;
+    Console.WriteLine($"Ваше число принадлежит {count} неделе");
+    Console.ForegroundColor = ConsoleColor.White;
 }
 
-Console.WriteLine();
-Console.ForegroundColor = ConsoleColor.DarkYellow;
-Console.WriteLine($"Ваше число принадлежит {count} неделе");
-Console.ForegroundColor = ConsoleColor.White;
 Console.WriteLine("***");
 Console.WriteLine("Программа, выполнена!");
