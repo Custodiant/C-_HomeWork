@@ -11,6 +11,7 @@ Console.WriteLine("Является ли ваше число палиндром�
 Console.WriteLine("***");
 Console.WriteLine("Введите число: ");
 int num = int.Parse(Console.ReadLine());
+int num1 = num;
 int num_rev = 0;
 int b = 0;
 
@@ -22,10 +23,10 @@ while (num > 0)
 }
 
 Console.WriteLine("--");
-Console.WriteLine(num_rev);
+Console.WriteLine($"Перевернутое значение = {num_rev}");
 Console.WriteLine("--");
 
-if (num_rev == num)
+if (num_rev == num1)
 {
     Console.ForegroundColor = ConsoleColor.Yellow;
     Console.WriteLine("Ваше число - ПАЛИНДРОМ!");
