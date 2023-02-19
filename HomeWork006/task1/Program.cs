@@ -39,7 +39,10 @@ void EvenArray(double[] collection3)
 
 Console.Clear();
 
-double[] array = new double[5];
+
+Console.WriteLine($"Введите, сколько чисел вы хотите проверить: ");
+int n = int.Parse(Console.ReadLine()!);
+double[] array = new double[n];
 
 Console.WriteLine($"Введите любые числа: ");
 UserNumbers(array);
