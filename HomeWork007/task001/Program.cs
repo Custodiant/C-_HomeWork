@@ -22,7 +22,7 @@ void PrintArray(double[,] tables)
 
 void FillArray(double[,] matr)
 {
-    Random random = new Random()/* .Next(-10, 10) */;
+    Random random = new Random();
     for (int i = 0; i < matr.GetLength(0); i++)
     {
         for (int j = 0; j < matr.GetLength(1); j++)
