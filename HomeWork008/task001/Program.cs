@@ -93,21 +93,43 @@ Console.Write("Количество столбцов:");
 int column = int.Parse(Console.ReadLine()!);
 Console.Write("Количество строк:");
 int stroke = int.Parse(Console.ReadLine()!);
-Console.Write("Минимальное число: ");
-int min = int.Parse(Console.ReadLine()!);
-Console.Write("Максимальное число: ");
-int max = int.Parse(Console.ReadLine()!);
 
-Console.WriteLine();
-int[,] table = GenerateArray(column, stroke, min, max);
+if (column <= 1 || stroke <= 1)
+{
+    Console.ForegroundColor = ConsoleColor.DarkRed;
+    Console.WriteLine($"Количество строк или столбцов, не может быть меньше 1!");
+    Console.ResetColor();
+}
+else
+{
+    Console.Write("Минимальное число: ");
+    int min = int.Parse(Console.ReadLine()!);
+    Console.Write("Максимальное число: ");
+    int max = int.Parse(Console.ReadLine()!);
+    if (min < max)
+    {
+        Console.WriteLine();
+        int[,] table = GenerateArray(column, stroke, min, max);
 
-Console.WriteLine("Ваша матрица: ");
-PrintArray(table);
+        Console.WriteLine("Ваша матрица: ");
+        PrintArray(table);
 
-Console.WriteLine("Отсортируем строки: ");
-SortedStroceArray(table);
-PrintArray(table);
+        Console.WriteLine("Отсортируем строки: ");
+        SortedStroceArray(table);
+        PrintArray(table);
 
-Console.WriteLine("Отсортируем столбцы: ");
-SortedColumnArray(table);
-PrintArray(table);
+        Console.WriteLine("Отсортируем столбцы: ");
+        SortedColumnArray(table);
+        PrintArray(table);
+    }
+    else
+    {
+        Console.ForegroundColor = ConsoleColor.DarkRed;
+        Console.WriteLine($"Минимальное число {min}, не может быть больше либо равно максимальному {max}!");
+        Console.ResetColor();
+    }
+}
+
+
+
+
